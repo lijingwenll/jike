@@ -5,27 +5,26 @@ const port = process.env.PORT || 8000
 const server = http.createServer((req, res) => {
     res.statusCode = 200
     res.setHeader('Content-Type', 'text/html')
-    res.end(`
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <title>Title</title>
-            <style>
-                body #myid {
-                    width: 100px;
-                    background: darkblue;
-                }
-                body img {
-                    width: 200px;
-                }
-            </style>
-        </head>
-        <body>
-            <img id="myid" />
+    res.end(`<html maaa=a>
+    <head>
+        <style>
+    body div #myid{
+        width:100px;
+        background-color: #ff5000;
+    }
+    body div img{
+        width:30px;
+        background-color: #ff1111;
+    }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img id="myid"/>
             <img />
-        </body>
-        </html>
-    `)
+        </div>
+    </body>
+    </html>`)
 })
 
 server.listen(port, () => {

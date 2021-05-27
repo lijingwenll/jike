@@ -33,8 +33,8 @@ class Request {
                 connection.write(this.toString());
             })
             connection.on('data', data => {
-                console.log(data,'data')
                 parser.receive(data.toString());
+                    console.log(data)
                 if (parser.isFinished) {
                     resolve(parser.response);
                     connection.end();
@@ -153,5 +153,5 @@ void async function () {
         }
     });
     let res = await request.send();
-    let dom = parser.parseHtml(res.body);
+    let dom = parser.parseHTML(res.body);
 }();
